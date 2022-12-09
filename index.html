@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="@ Home">
-    <meta property="og:site_name" content="rainwashed.tk">
-    <meta property="og:url" content="https://rainwashed.tk">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="./public/assets/favicon.png">
+    <meta property="og:title" content="@ Home" />
+    <meta property="og:site_name" content="rainwashed.tk" />
+    <meta property="og:url" content="https://rainwashed.tk" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://i.gyazo.com/113d894f2d82784c545818f868f3eeb9.png"
+    />
     <title>RainWashed @ Home</title>
-    <link rel="shortcut icon" href="./public/assets/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./public/assets/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./public/styles/root.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -24,32 +31,31 @@
       type="text/css"
     />
     <script type="module" defer>
-      import anime from "./node_modules/animejs/lib/anime.es.js"
+      import anime from "./public/scripts/anime.es.js";
 
       anime({
         targets: ".text_div h1, .text_div p",
         opacity: [0, 1],
         translateY: [-100, 0],
         duration: 500,
-        easing: "easeOutBack"
-      })
+        easing: "easeOutBack",
+      });
 
       anime({
         targets: ".line",
         opacity: [0, 1],
         duration: 300,
         easing: "linear",
-        delay: 500
-      })
+        delay: 500,
+      });
 
       anime({
         targets: ".quick_links",
         opacity: [0, 1],
         duration: 300,
         easing: "linear",
-        delay: 600
-      })
-
+        delay: 600,
+      });
     </script>
   </head>
   <body>
@@ -66,28 +72,28 @@
           class="line"
         ></div>
         <div class="quick_links">
-            <a href="https://github.com/rainwashed" title="GitHub">
-                <button class="icon_button">
-                    <i class="fa-brands fa-github"></i>
-                  </button>
-            </a>
-            <a href="mailto:rainwashed@yandex.com" title="Email">
-                <button class="icon_button">
-                    <i class="fa-solid fa-envelope"></i>
-                  </button>
-            </a>
-            <a href="https://www.pexels.com/@andrew-li-382867436" title="Pexels">
-                <button class="icon_button">
-                    <i class="fa-solid fa-camera-polaroid"></i>
-                  </button>
-            </a>
-            <a href="https://www.instagram.com/rain_washed" title="Instagram">
-                <button class="icon_button">
-                    <i class="fa-brands fa-instagram"></i>
-                </button>
-            </a>
+          <a href="https://github.com/rainwashed" title="GitHub">
+            <button class="icon_button">
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </a>
+          <a href="mailto:rainwashed@yandex.com" title="Email">
+            <button class="icon_button">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </a>
+          <a href="https://www.pexels.com/@andrew-li-382867436" title="Pexels">
+            <button class="icon_button">
+              <i class="fa-solid fa-camera-polaroid"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/rain_washed" title="Instagram">
+            <button class="icon_button">
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+        </div>
       </div>
     </main>
-    
   </body>
 </html>
