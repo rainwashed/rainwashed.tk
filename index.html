@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="@ Home">
+    <meta property="og:site_name" content="rainwashed.tk">
+    <meta property="og:url" content="https://rainwashed.tk">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.gyazo.com/113d894f2d82784c545818f868f3eeb9.png">
+    <title>RainWashed @ Home</title>
+    <link rel="stylesheet" href="./public/styles/root.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="./public/styles/index.page.css"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="module" defer>
+      import anime from "./node_modules/animejs/lib/anime.es.js"
+
+      anime({
+        targets: ".text_div h1, .text_div p",
+        opacity: [0, 1],
+        translateY: [-100, 0],
+        duration: 500,
+        easing: "easeOutBack"
+      })
+
+      anime({
+        targets: ".line",
+        opacity: [0, 1],
+        duration: 300,
+        easing: "linear",
+        delay: 500
+      })
+
+      anime({
+        targets: ".quick_links",
+        opacity: [0, 1],
+        duration: 300,
+        easing: "linear",
+        delay: 600
+      })
+
+    </script>
+  </head>
+  <body>
+    <main>
+      <img
+        src="./public/assets/rainwashed-banner-vertical.svg"
+        draggable="false"
+      />
+      <div class="text_div">
+        <h1>Andrew Li (RainWashed)</h1>
+        <p>Programmer, Photographer, Student</p>
+        <div
+          style="--width: 25vw; --height: 5px; --margins: 5vh"
+          class="line"
+        ></div>
+        <div class="quick_links">
+            <a href="https://github.com/rainwashed" title="GitHub">
+                <button class="icon_button">
+                    <i class="fa-brands fa-github"></i>
+                  </button>
+            </a>
+            <a href="mailto:rainwashed@yandex.com" title="Email">
+                <button class="icon_button">
+                    <i class="fa-solid fa-envelope"></i>
+                  </button>
+            </a>
+            <a href="https://www.pexels.com/@andrew-li-382867436" title="Pexels">
+                <button class="icon_button">
+                    <i class="fa-solid fa-camera-polaroid"></i>
+                  </button>
+            </a>
+            <a href="https://www.instagram.com/rain_washed" title="Instagram">
+                <button class="icon_button">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+            </a>
+      </div>
+    </main>
+    
+  </body>
+</html>

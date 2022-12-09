@@ -1,0 +1,62 @@
+:root {
+  --iconButtonStationaryColor: #adadad;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main img {
+  width: auto;
+  height: 100vh;
+}
+
+main div.text_div {
+  display: flex;
+  padding-left: 5vw;
+  width: 100%;
+  height: 100vh;
+  flex-flow: column nowrap;
+
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: rgba(255, 0, 0, 0.2); */
+}
+
+div.line {
+  margin-top: var(--margins, 0);
+  margin-bottom: var(--margins, 0);
+  width: var(--width, 100px);
+  height: var(--height, 1px);
+  background-color: rgba(100, 100, 100, 0.35);
+  border-radius: 100px;
+}
+
+.icon_button {
+  width: 4vw;
+  height: 4vw;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.icon_button i {
+  font-size: 300%;
+  color: var(--iconButtonStationaryColor);
+  filter: brightness(1);
+  transition: filter 150ms linear;
+}
+
+.icon_button:hover i,
+.icon_button:focus {
+  --filterIntensity: 1.5;
+
+  filter: brightness(var(--filterIntensity));
+}
+
+div.quick_links {
+  display: flex;
+  flex-flow: row nowrap;
+}

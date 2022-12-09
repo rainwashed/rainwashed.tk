@@ -1,0 +1,30 @@
+/* Declare Nunito Font  */
+
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+:root {
+  --fontSizePrimary: 20px;
+  --fontWeightPrimary: 200;
+  --backgroundColorPrimary: #111;
+  --textColorPrimary: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--fontSizePrimary);
+  font-weight: var(--fontWeightPrimary);
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColorPrimary);
+  color: var(--textColorPrimary);
+}
