@@ -2,6 +2,10 @@
   --iconButtonStationaryColor: #adadad;
 }
 
+body {
+  overflow: hidden;
+}
+
 main {
   display: flex;
   flex-flow: row nowrap;
@@ -62,11 +66,39 @@ div.quick_links {
 }
 
 @media (orientation: portrait) {
-  main img {
+  main div.image {
     display: none !important;
   }
 
   div.quick_links * {
     margin-inline: 8%;
   }
+}
+
+/* svg animation setup here */
+.strokes-parent path {
+  stroke: rgba(255, 255, 255, 1);
+  stroke-dasharray: 1000;
+  animation: stroke 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite forwards;
+  animation-direction: reverse;
+}
+
+@keyframes stroke {
+  0% {
+    /* stroke: rgba(255, 255, 255, 0); */
+    stroke-dashoffset: 0;
+  }
+  100% {
+    /* stroke: rgba(255, 255, 255, 1); */
+    stroke-dashoffset: 2000;
+  }
+}
+
+.strokes-parent path:first-child,
+.strokes-parent path:nth-child(2) {
+  transform: scale(-1, 1);
+}
+
+.strokes-parent path {
+  animation-delay: var(--delay, 0ms);
 }
