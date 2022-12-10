@@ -7,7 +7,7 @@ main {
   flex-flow: row nowrap;
 }
 
-main img {
+main div.image svg {
   width: auto;
   height: 100vh;
 }
@@ -43,7 +43,7 @@ div.line {
   cursor: pointer;
 }
 .icon_button i {
-  font-size: 300%;
+  font-size: 2vmax;
   color: var(--iconButtonStationaryColor);
   filter: brightness(1);
   transition: filter 150ms linear;
@@ -59,4 +59,14 @@ div.line {
 div.quick_links {
   display: flex;
   flex-flow: row nowrap;
+}
+
+@media (orientation: portrait) {
+  main img {
+    display: none !important;
+  }
+
+  div.quick_links * {
+    margin-inline: 8%;
+  }
 }
