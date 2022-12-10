@@ -11,9 +11,35 @@ main {
   flex-flow: row nowrap;
 }
 
+main div.image {
+  position: relative;
+}
+
 main div.image svg {
   width: auto;
   height: 100vh;
+}
+
+main div.image button {
+  --margin: 10px;
+  position: absolute;
+  left: var(--margin, 20px);
+  top: calc(100vh - var(--margin, 20px));
+  transform: translate(0, -100%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.1);
+  transition: 250ms linear;
+  transition-property: background-color, color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main div.image button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 main div.text_div {
@@ -83,13 +109,29 @@ div.quick_links {
   animation-direction: reverse;
 }
 
+.stroke-anim-cooler path {
+  stroke: rgba(255, 255, 255, 0);
+  stroke-dasharray: 1000;
+  animation: stroke_cooler 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite forwards;
+  animation-direction: reverse;
+}
+
 @keyframes stroke {
   0% {
-    /* stroke: rgba(255, 255, 255, 0); */
     stroke-dashoffset: 0;
   }
   100% {
-    /* stroke: rgba(255, 255, 255, 1); */
+    stroke-dashoffset: 2000;
+  }
+}
+
+@keyframes stroke_cooler {
+  0% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke: rgba(255, 255, 255, 1);
     stroke-dashoffset: 2000;
   }
 }
