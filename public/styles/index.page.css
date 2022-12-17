@@ -143,4 +143,5 @@ div.quick_links {
 
 .strokes-parent path {
   animation-delay: var(--delay, 0ms);
+  cursor: pointer;
 }
